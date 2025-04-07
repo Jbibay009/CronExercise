@@ -1,10 +1,13 @@
 name: Log Time Job
 on:
+
 schedule:
 - cron: "*/5 * * * *" # Runs every 5 minutes
 jobs:
+
 log_time:
 runs-on: ubuntu-latest
+
 steps:
 - name: Checkout repository
 uses: actions/checkout@v3
@@ -14,6 +17,7 @@ chmod +x log_time.sh
 ./log_time.sh
 
 - name: Commit and push changes
+
 run: |
 git config --global user.name "github-actions"
 git config --global user.email "github-actions@github.com"
