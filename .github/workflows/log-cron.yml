@@ -10,7 +10,7 @@ runs-on: ubuntu-latest
 
 steps:
 - name: Checkout repository
-uses: actions/checkout@v3
+uses: actions/checkout@latest
 - name: Run logging script
 run: |
 chmod +x log_time.sh
